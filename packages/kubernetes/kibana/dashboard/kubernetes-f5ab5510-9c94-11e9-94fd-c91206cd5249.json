@@ -82,7 +82,7 @@
                 },
                 "panelIndex": "c13eb504-6afb-4fa5-8a7d-a75c5fee15b7",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -166,7 +166,7 @@
                 "panelIndex": "ff6afcdf-0de2-47fb-aa9e-72b48f11e0cd",
                 "title": "",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -204,7 +204,7 @@
                 },
                 "panelIndex": "a47d16df-1a5a-49e1-9a33-dba87c371904",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -339,191 +339,185 @@
                 "panelIndex": "a2b844d8-11e3-4469-af4b-744d33b603ad",
                 "title": "Pending pods",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
-                    "enhancements": {},
-                    "hidePanelTitles": true,
-                    "savedVis": {
-                        "data": {
-                            "aggs": [],
-                            "searchSource": {
-                                "filter": [],
-                                "query": {
-                                    "language": "kuery",
-                                    "query": ""
+                    "attributes": {
+                        "description": "",
+                        "references": [
+                            {
+                                "id": "metrics-*",
+                                "name": "indexpattern-datasource-layer-8cad09ad-7860-45ac-aaad-7b94af09c33d",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "layers": {
+                                        "8cad09ad-7860-45ac-aaad-7b94af09c33d": {
+                                            "columnOrder": [
+                                                "7bce9fb8-18e2-4eb4-a7d7-891cc72a3c51",
+                                                "7bce9fb8-18e2-4eb4-a7d7-891cc72a3c51X0"
+                                            ],
+                                            "columns": {
+                                                "7bce9fb8-18e2-4eb4-a7d7-891cc72a3c51": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Preemption attempts",
+                                                    "operationType": "formula",
+                                                    "params": {
+                                                        "formula": "max(kubernetes.scheduler.scheduling.preemption.attempts.count)",
+                                                        "isFormulaBroken": false
+                                                    },
+                                                    "references": [
+                                                        "7bce9fb8-18e2-4eb4-a7d7-891cc72a3c51X0"
+                                                    ],
+                                                    "scale": "ratio"
+                                                },
+                                                "7bce9fb8-18e2-4eb4-a7d7-891cc72a3c51X0": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Part of Preemption attempts",
+                                                    "operationType": "max",
+                                                    "params": {
+                                                        "emptyAsNull": false
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "kubernetes.scheduler.scheduling.preemption.attempts.count"
+                                                }
+                                            },
+                                            "incompleteColumns": {},
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "textBased": {
+                                    "layers": {}
                                 }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "layerId": "8cad09ad-7860-45ac-aaad-7b94af09c33d",
+                                "layerType": "data",
+                                "metricAccessor": "7bce9fb8-18e2-4eb4-a7d7-891cc72a3c51"
                             }
                         },
-                        "description": "",
-                        "id": "",
-                        "params": {
-                            "axis_formatter": "number",
-                            "axis_position": "left",
-                            "axis_scale": "normal",
-                            "background_color_rules": [
-                                {
-                                    "id": "bbe87000-8acb-11ed-b797-e3766bb8f14b"
-                                }
-                            ],
-                            "drop_last_bucket": 0,
-                            "filter": {
-                                "language": "kuery",
-                                "query": "kubernetes.scheduler.scheduling.preemption.attempts.count : * "
-                            },
-                            "hide_last_value_indicator": true,
-                            "id": "4dce3687-9b11-4c68-a5cd-59859fe9e9c7",
-                            "index_pattern_ref_name": "metrics_d90b0470-44ab-4636-b90b-2b95e79e0577_0_index_pattern",
-                            "interval": "",
-                            "isModelInvalid": false,
-                            "max_lines_legend": 1,
-                            "series": [
-                                {
-                                    "axis_position": "right",
-                                    "chart_type": "line",
-                                    "color": "#68BC00",
-                                    "fill": 0.5,
-                                    "formatter": "default",
-                                    "id": "777e5b65-0feb-42f7-ae5a-18579ef36f1e",
-                                    "label": "Preemption attempts",
-                                    "line_width": 1,
-                                    "metrics": [
-                                        {
-                                            "field": "kubernetes.scheduler.scheduling.preemption.attempts.count",
-                                            "id": "4030c954-9620-4911-ad15-82629299d36d",
-                                            "type": "sum"
-                                        }
-                                    ],
-                                    "override_index_pattern": 0,
-                                    "palette": {
-                                        "name": "default",
-                                        "type": "palette"
-                                    },
-                                    "point_size": 1,
-                                    "separate_axis": 0,
-                                    "series_drop_last_bucket": 0,
-                                    "split_mode": "everything",
-                                    "stacked": "none",
-                                    "time_range_mode": "entire_time_range"
-                                }
-                            ],
-                            "show_grid": 1,
-                            "show_legend": 1,
-                            "time_field": "",
-                            "time_range_mode": "last_value",
-                            "tooltip_mode": "show_all",
-                            "truncate_legend": 1,
-                            "type": "metric",
-                            "use_kibana_indexes": true
-                        },
                         "title": "",
-                        "type": "metrics",
-                        "uiState": {}
-                    }
+                        "type": "lens",
+                        "visualizationType": "lnsMetric"
+                    },
+                    "enhancements": {},
+                    "hidePanelTitles": true
                 },
                 "gridData": {
                     "h": 6,
-                    "i": "d90b0470-44ab-4636-b90b-2b95e79e0577",
+                    "i": "125ec894-444e-486b-a9c8-7205cde12a7e",
                     "w": 8,
                     "x": 13,
                     "y": 6
                 },
-                "panelIndex": "d90b0470-44ab-4636-b90b-2b95e79e0577",
-                "type": "visualization",
-                "version": "8.7.1"
+                "panelIndex": "125ec894-444e-486b-a9c8-7205cde12a7e",
+                "type": "lens",
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
-                    "enhancements": {},
-                    "hidePanelTitles": true,
-                    "savedVis": {
-                        "data": {
-                            "aggs": [],
-                            "searchSource": {
-                                "filter": [],
-                                "query": {
-                                    "language": "kuery",
-                                    "query": ""
+                    "attributes": {
+                        "description": "",
+                        "references": [
+                            {
+                                "id": "metrics-*",
+                                "name": "indexpattern-datasource-layer-af585c84-2ebf-42a3-9073-4d76e8b2610d",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "layers": {
+                                        "af585c84-2ebf-42a3-9073-4d76e8b2610d": {
+                                            "columnOrder": [
+                                                "19819472-270b-4678-8367-9d09f29ae509",
+                                                "19819472-270b-4678-8367-9d09f29ae509X0"
+                                            ],
+                                            "columns": {
+                                                "19819472-270b-4678-8367-9d09f29ae509": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Preemption victims",
+                                                    "operationType": "formula",
+                                                    "params": {
+                                                        "formula": "max(kubernetes.scheduler.scheduling.preemption.victims.count)",
+                                                        "isFormulaBroken": false
+                                                    },
+                                                    "references": [
+                                                        "19819472-270b-4678-8367-9d09f29ae509X0"
+                                                    ],
+                                                    "scale": "ratio"
+                                                },
+                                                "19819472-270b-4678-8367-9d09f29ae509X0": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Part of Preemption victims",
+                                                    "operationType": "max",
+                                                    "params": {
+                                                        "emptyAsNull": false
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "kubernetes.scheduler.scheduling.preemption.victims.count"
+                                                }
+                                            },
+                                            "incompleteColumns": {},
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "textBased": {
+                                    "layers": {}
                                 }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "layerId": "af585c84-2ebf-42a3-9073-4d76e8b2610d",
+                                "layerType": "data",
+                                "metricAccessor": "19819472-270b-4678-8367-9d09f29ae509"
                             }
                         },
-                        "description": "",
-                        "params": {
-                            "axis_formatter": "number",
-                            "axis_position": "left",
-                            "axis_scale": "normal",
-                            "background_color_rules": [
-                                {
-                                    "id": "bbe87000-8acb-11ed-b797-e3766bb8f14b"
-                                }
-                            ],
-                            "drop_last_bucket": 0,
-                            "filter": {
-                                "language": "kuery",
-                                "query": "kubernetes.scheduler.scheduling.preemption.victims.sum : * "
-                            },
-                            "hide_last_value_indicator": true,
-                            "id": "4dce3687-9b11-4c68-a5cd-59859fe9e9c7",
-                            "index_pattern_ref_name": "metrics_c6af3313-89c6-493b-8456-a296d3cd78a8_0_index_pattern",
-                            "interval": "",
-                            "isModelInvalid": false,
-                            "max_lines_legend": 1,
-                            "series": [
-                                {
-                                    "axis_position": "right",
-                                    "chart_type": "line",
-                                    "color": "#68BC00",
-                                    "fill": 0.5,
-                                    "formatter": "default",
-                                    "id": "777e5b65-0feb-42f7-ae5a-18579ef36f1e",
-                                    "label": "Preemption victims",
-                                    "line_width": 1,
-                                    "metrics": [
-                                        {
-                                            "field": "kubernetes.scheduler.scheduling.preemption.victims.count",
-                                            "id": "4030c954-9620-4911-ad15-82629299d36d",
-                                            "type": "sum"
-                                        }
-                                    ],
-                                    "override_index_pattern": 0,
-                                    "palette": {
-                                        "name": "default",
-                                        "type": "palette"
-                                    },
-                                    "point_size": 1,
-                                    "separate_axis": 0,
-                                    "series_drop_last_bucket": 0,
-                                    "split_mode": "everything",
-                                    "stacked": "none",
-                                    "time_range_mode": "entire_time_range"
-                                }
-                            ],
-                            "show_grid": 1,
-                            "show_legend": 1,
-                            "time_field": "",
-                            "time_range_mode": "last_value",
-                            "tooltip_mode": "show_all",
-                            "truncate_legend": 1,
-                            "type": "metric",
-                            "use_kibana_indexes": true
-                        },
                         "title": "",
-                        "type": "metrics",
-                        "uiState": {}
-                    }
+                        "type": "lens",
+                        "visualizationType": "lnsMetric"
+                    },
+                    "enhancements": {},
+                    "hidePanelTitles": true
                 },
                 "gridData": {
                     "h": 6,
-                    "i": "c6af3313-89c6-493b-8456-a296d3cd78a8",
+                    "i": "e6506b77-2e3b-4bfa-831a-8a5daada553b",
                     "w": 8,
                     "x": 21,
                     "y": 6
                 },
-                "panelIndex": "c6af3313-89c6-493b-8456-a296d3cd78a8",
-                "title": "",
-                "type": "visualization",
-                "version": "8.7.1"
+                "panelIndex": "e6506b77-2e3b-4bfa-831a-8a5daada553b",
+                "type": "lens",
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -603,7 +597,7 @@
                                                                 "suffix": "ms"
                                                             }
                                                         },
-                                                        "formula": "last_value(kubernetes.scheduler.scheduling.attempts.duration.us.sum)/pick_max(last_value(kubernetes.scheduler.scheduling.attempts.duration.us.count),1)/1000",
+                                                        "formula": "max(kubernetes.scheduler.scheduling.attempts.duration.us.sum)/pick_max(max(kubernetes.scheduler.scheduling.attempts.duration.us.count),1)/1000",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -620,7 +614,7 @@
                                                     },
                                                     "isBucketed": false,
                                                     "label": "Part of Average latency",
-                                                    "operationType": "last_value",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "sortField": "@timestamp"
                                                     },
@@ -636,7 +630,7 @@
                                                     },
                                                     "isBucketed": false,
                                                     "label": "Part of Average latency",
-                                                    "operationType": "last_value",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "sortField": "@timestamp"
                                                     },
@@ -665,7 +659,7 @@
                                                                                 "min": 69
                                                                             },
                                                                             "name": "pick_max",
-                                                                            "text": "pick_max(last_value(kubernetes.scheduler.scheduling.attempts.duration.us.count),1)",
+                                                                            "text": "pick_max(max(kubernetes.scheduler.scheduling.attempts.duration.us.count),1)",
                                                                             "type": "function"
                                                                         }
                                                                     ],
@@ -679,7 +673,7 @@
                                                                 "min": 0
                                                             },
                                                             "name": "divide",
-                                                            "text": "last_value(kubernetes.scheduler.scheduling.attempts.duration.us.sum)/pick_max(last_value(kubernetes.scheduler.scheduling.attempts.duration.us.count),1)/1000",
+                                                            "text": "max(kubernetes.scheduler.scheduling.attempts.duration.us.sum)/pick_max(max(kubernetes.scheduler.scheduling.attempts.duration.us.count),1)/1000",
                                                             "type": "function"
                                                         }
                                                     },
@@ -771,7 +765,7 @@
                 "panelIndex": "181a3fe5-e5b5-472e-98af-ea4aaadc3109",
                 "title": "Average scheduling attempt latency",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -804,7 +798,7 @@
                                                     "label": "Attempts",
                                                     "operationType": "formula",
                                                     "params": {
-                                                        "formula": "counter_rate(max(kubernetes.scheduler.scheduling.attempts.duration.us.sum))",
+                                                        "formula": "counter_rate(last_value(kubernetes.scheduler.scheduling.attempts.duration.us.sum))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -816,11 +810,15 @@
                                                 "46b12a48-f8b8-42ca-bfd6-adec41da55edX0": {
                                                     "customLabel": true,
                                                     "dataType": "number",
+                                                    "filter": {
+                                                        "language": "kuery",
+                                                        "query": "kubernetes.scheduler.scheduling.attempts.duration.us.sum: *"
+                                                    },
                                                     "isBucketed": false,
                                                     "label": "Part of Attempts",
-                                                    "operationType": "max",
+                                                    "operationType": "last_value",
                                                     "params": {
-                                                        "emptyAsNull": false
+                                                        "sortField": "@timestamp"
                                                     },
                                                     "scale": "ratio",
                                                     "sourceField": "kubernetes.scheduler.scheduling.attempts.duration.us.sum"
@@ -935,7 +933,7 @@
                 "panelIndex": "d35d8849-89ba-42b8-8120-c14b087f9690",
                 "title": "Attempts counter rate by result",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1019,7 +1017,7 @@
                 "panelIndex": "0599e0ae-2375-4ceb-b12d-2ebec4310cc6",
                 "title": "",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1032,7 +1030,7 @@
                             },
                             {
                                 "id": "metrics-*",
-                                "name": "f70e4843-55bc-47d0-8f1c-fbb4e72cfe92",
+                                "name": "6572ee4d-01b4-47db-8804-d8ef217e21da",
                                 "type": "index-pattern"
                             }
                         ],
@@ -1070,7 +1068,7 @@
                                                     "label": "Counter rate",
                                                     "operationType": "formula",
                                                     "params": {
-                                                        "formula": "counter_rate(max(kubernetes.scheduler.workqueue.adds.count))",
+                                                        "formula": "counter_rate(last_value(kubernetes.scheduler.workqueue.adds.count))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -1083,10 +1081,10 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Counter rate",
-                                                    "operationType": "max",
+                                                    "label": "",
+                                                    "operationType": "last_value",
                                                     "params": {
-                                                        "emptyAsNull": false
+                                                        "sortField": "@timestamp"
                                                     },
                                                     "scale": "ratio",
                                                     "sourceField": "kubernetes.scheduler.workqueue.adds.count"
@@ -1095,7 +1093,7 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Counter rate",
+                                                    "label": "",
                                                     "operationType": "counter_rate",
                                                     "references": [
                                                         "5b2495ee-2297-4e20-81d3-ac385205cb01X0"
@@ -1110,30 +1108,21 @@
                                                     "label": "Workqueues",
                                                     "operationType": "terms",
                                                     "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
                                                         "missingBucket": false,
-                                                        "orderAgg": {
-                                                            "dataType": "number",
-                                                            "isBucketed": false,
-                                                            "label": "Sum of kubernetes.scheduler.workqueue.adds.count",
-                                                            "operationType": "sum",
-                                                            "params": {
-                                                                "emptyAsNull": true
-                                                            },
-                                                            "scale": "ratio",
-                                                            "sourceField": "kubernetes.scheduler.workqueue.adds.count"
-                                                        },
                                                         "orderBy": {
-                                                            "type": "custom"
+                                                            "fallback": true,
+                                                            "type": "alphabetical"
                                                         },
-                                                        "orderDirection": "desc",
-                                                        "otherBucket": false,
+                                                        "orderDirection": "asc",
+                                                        "otherBucket": true,
                                                         "parentFormat": {
-                                                            "id": "multi_terms"
+                                                            "id": "terms"
                                                         },
-                                                        "secondaryFields": [
-                                                            "host.name"
-                                                        ],
-                                                        "size": 10
+                                                        "size": 5
                                                     },
                                                     "scale": "ordinal",
                                                     "sourceField": "kubernetes.scheduler.name"
@@ -1152,7 +1141,7 @@
                                     "meta": {
                                         "alias": null,
                                         "disabled": false,
-                                        "index": "f70e4843-55bc-47d0-8f1c-fbb4e72cfe92",
+                                        "index": "6572ee4d-01b4-47db-8804-d8ef217e21da",
                                         "key": "kubernetes.scheduler.workqueue.adds.count",
                                         "negate": false,
                                         "type": "exists",
@@ -1225,7 +1214,7 @@
                 "panelIndex": "2ba53067-d43d-42eb-ac50-2d941977ce95",
                 "title": "Workqueue additions increase rate",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1433,7 +1422,7 @@
                 "panelIndex": "1cd3ebab-9630-4253-b9a6-5f921e5cb617",
                 "title": "Workqueue retries increase rate",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1648,7 +1637,7 @@
                 "panelIndex": "3a26dffa-0696-485d-b991-1dbc5092082e",
                 "title": "Workqueue depth rate",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1862,7 +1851,7 @@
                 "panelIndex": "6a8b9a40-11ec-4790-a38d-2d88c5468f12",
                 "title": "Current unfinished work",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1946,7 +1935,7 @@
                 "panelIndex": "c3fee68f-01c6-49da-a759-2900b1cd15bf",
                 "title": "",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -2263,7 +2252,7 @@
                 "panelIndex": "a0716ae8-4157-473d-8eba-8ff6625fed4b",
                 "title": "Scheduler process data",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -2423,7 +2412,7 @@
                 "panelIndex": "303702e1-ba33-49f2-b337-4cc7d7305606",
                 "title": "Average resident memory",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -2649,7 +2638,7 @@
                 "panelIndex": "1604f0de-edd6-456e-8670-ab9b33988abb",
                 "title": "CPU usage increase over time",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -2733,7 +2722,7 @@
                 "panelIndex": "f8313a9d-ab58-448e-b183-75f914caf53f",
                 "title": "",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -2926,7 +2915,7 @@
                 "panelIndex": "668a51aa-98da-465e-9b09-d49e4f219968",
                 "title": "Leader scheduler",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -2964,7 +2953,7 @@
                 },
                 "panelIndex": "e70eea20-8653-4340-b6dd-620090d3cf7a",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -2973,11 +2962,6 @@
                             {
                                 "id": "metrics-*",
                                 "name": "indexpattern-datasource-layer-7c7c4b67-a2df-427f-abbd-635e5fa73a9c",
-                                "type": "index-pattern"
-                            },
-                            {
-                                "id": "metrics-*",
-                                "name": "5206ded0-a875-4a7a-bc9b-8bca52c21d4a",
                                 "type": "index-pattern"
                             }
                         ],
@@ -2998,9 +2982,7 @@
                                                 "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X0",
                                                 "00501c90-b23d-4bca-9354-eb2c48236139",
                                                 "00501c90-b23d-4bca-9354-eb2c48236139X1",
-                                                "00501c90-b23d-4bca-9354-eb2c48236139X0",
-                                                "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X2",
-                                                "00501c90-b23d-4bca-9354-eb2c48236139X2"
+                                                "00501c90-b23d-4bca-9354-eb2c48236139X0"
                                             ],
                                             "columns": {
                                                 "00501c90-b23d-4bca-9354-eb2c48236139": {
@@ -3020,11 +3002,11 @@
                                                                 "decimals": 1
                                                             }
                                                         },
-                                                        "formula": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
+                                                        "formula": "counter_rate(last_value(kubernetes.scheduler.client.request.count))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
-                                                        "00501c90-b23d-4bca-9354-eb2c48236139X2"
+                                                        "00501c90-b23d-4bca-9354-eb2c48236139X1"
                                                     ],
                                                     "scale": "ratio",
                                                     "timeScale": "s"
@@ -3038,9 +3020,9 @@
                                                     },
                                                     "isBucketed": false,
                                                     "label": "Part of Server errors",
-                                                    "operationType": "sum",
+                                                    "operationType": "last_value",
                                                     "params": {
-                                                        "emptyAsNull": false
+                                                        "sortField": "@timestamp"
                                                     },
                                                     "scale": "ratio",
                                                     "sourceField": "kubernetes.scheduler.client.request.count"
@@ -3061,32 +3043,6 @@
                                                     "scale": "ratio",
                                                     "timeScale": "s"
                                                 },
-                                                "00501c90-b23d-4bca-9354-eb2c48236139X2": {
-                                                    "customLabel": true,
-                                                    "dataType": "number",
-                                                    "isBucketed": false,
-                                                    "label": "Part of Server errors",
-                                                    "operationType": "math",
-                                                    "params": {
-                                                        "tinymathAst": {
-                                                            "args": [
-                                                                "00501c90-b23d-4bca-9354-eb2c48236139X1",
-                                                                0
-                                                            ],
-                                                            "location": {
-                                                                "max": 73,
-                                                                "min": 0
-                                                            },
-                                                            "name": "defaults",
-                                                            "text": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
-                                                            "type": "function"
-                                                        }
-                                                    },
-                                                    "references": [
-                                                        "00501c90-b23d-4bca-9354-eb2c48236139X1"
-                                                    ],
-                                                    "scale": "ratio"
-                                                },
                                                 "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4": {
                                                     "customLabel": true,
                                                     "dataType": "number",
@@ -3104,11 +3060,11 @@
                                                                 "decimals": 1
                                                             }
                                                         },
-                                                        "formula": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
+                                                        "formula": "counter_rate(last_value(kubernetes.scheduler.client.request.count))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
-                                                        "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X2"
+                                                        "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X1"
                                                     ],
                                                     "scale": "ratio",
                                                     "timeScale": "s"
@@ -3122,9 +3078,9 @@
                                                     },
                                                     "isBucketed": false,
                                                     "label": "Part of Client errors",
-                                                    "operationType": "sum",
+                                                    "operationType": "last_value",
                                                     "params": {
-                                                        "emptyAsNull": false
+                                                        "sortField": "@timestamp"
                                                     },
                                                     "scale": "ratio",
                                                     "sourceField": "kubernetes.scheduler.client.request.count"
@@ -3145,32 +3101,6 @@
                                                     "scale": "ratio",
                                                     "timeScale": "s"
                                                 },
-                                                "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X2": {
-                                                    "customLabel": true,
-                                                    "dataType": "number",
-                                                    "isBucketed": false,
-                                                    "label": "Part of Client errors",
-                                                    "operationType": "math",
-                                                    "params": {
-                                                        "tinymathAst": {
-                                                            "args": [
-                                                                "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X1",
-                                                                0
-                                                            ],
-                                                            "location": {
-                                                                "max": 73,
-                                                                "min": 0
-                                                            },
-                                                            "name": "defaults",
-                                                            "text": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
-                                                            "type": "function"
-                                                        }
-                                                    },
-                                                    "references": [
-                                                        "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X1"
-                                                    ],
-                                                    "scale": "ratio"
-                                                },
                                                 "63268365-bb35-456f-831c-78238984a061": {
                                                     "customLabel": true,
                                                     "dataType": "number",
@@ -3184,7 +3114,7 @@
                                                                 "decimals": 1
                                                             }
                                                         },
-                                                        "formula": "counter_rate(max(kubernetes.scheduler.client.request.count))",
+                                                        "formula": "counter_rate(last_value(kubernetes.scheduler.client.request.count))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -3196,11 +3126,15 @@
                                                 "63268365-bb35-456f-831c-78238984a061X0": {
                                                     "customLabel": true,
                                                     "dataType": "number",
+                                                    "filter": {
+                                                        "language": "kuery",
+                                                        "query": "kubernetes.scheduler.client.request.count: *"
+                                                    },
                                                     "isBucketed": false,
                                                     "label": "Part of Requests",
-                                                    "operationType": "max",
+                                                    "operationType": "last_value",
                                                     "params": {
-                                                        "emptyAsNull": false
+                                                        "sortField": "@timestamp"
                                                     },
                                                     "scale": "ratio",
                                                     "sourceField": "kubernetes.scheduler.client.request.count"
@@ -3233,7 +3167,7 @@
                                                 "d3b90051-0bb2-41e0-9d5d-34ff145dba09": {
                                                     "dataType": "string",
                                                     "isBucketed": true,
-                                                    "label": "Top 3 values of host.name",
+                                                    "label": "Top values",
                                                     "operationType": "terms",
                                                     "params": {
                                                         "missingBucket": false,
@@ -3244,12 +3178,16 @@
                                                         "orderDirection": "asc",
                                                         "otherBucket": false,
                                                         "parentFormat": {
-                                                            "id": "terms"
+                                                            "id": "multi_terms"
                                                         },
+                                                        "secondaryFields": [
+                                                            "kubernetes.scheduler.method",
+                                                            "kubernetes.scheduler.code"
+                                                        ],
                                                         "size": 3
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "host.name"
+                                                    "sourceField": "kubernetes.scheduler.host"
                                                 }
                                             },
                                             "incompleteColumns": {}
@@ -3257,29 +3195,7 @@
                                     }
                                 }
                             },
-                            "filters": [
-                                {
-                                    "$state": {
-                                        "store": "appState"
-                                    },
-                                    "meta": {
-                                        "alias": null,
-                                        "disabled": false,
-                                        "index": "5206ded0-a875-4a7a-bc9b-8bca52c21d4a",
-                                        "key": "data_stream.dataset",
-                                        "negate": false,
-                                        "params": {
-                                            "query": "kubernetes.scheduler"
-                                        },
-                                        "type": "phrase"
-                                    },
-                                    "query": {
-                                        "match_phrase": {
-                                            "data_stream.dataset": "kubernetes.scheduler"
-                                        }
-                                    }
-                                }
-                            ],
+                            "filters": [],
                             "internalReferences": [],
                             "query": {
                                 "language": "kuery",
@@ -3341,7 +3257,7 @@
                 "panelIndex": "91a7ce56-6a49-4b7e-837f-31c184b48c09",
                 "title": "Requests and responses counter rate",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -3386,12 +3302,12 @@
                                                             "id": "multi_terms"
                                                         },
                                                         "secondaryFields": [
-                                                            "kubernetes.scheduler.host"
+                                                            "kubernetes.scheduler.verb"
                                                         ],
                                                         "size": 10
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "host.name"
+                                                    "sourceField": "kubernetes.scheduler.host"
                                                 },
                                                 "43097f7a-e478-47bc-81c1-7541bd899d46": {
                                                     "customLabel": true,
@@ -3556,20 +3472,20 @@
                     "y": 87
                 },
                 "panelIndex": "1bd24fa1-319e-4cae-9d45-d821b06a8034",
-                "title": "Request latency",
+                "title": "Average request latency",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             }
         ],
         "timeRestore": false,
         "title": "[Metrics Kubernetes] Scheduler",
         "version": 1
     },
-    "coreMigrationVersion": "8.7.1",
-    "created_at": "2023-05-11T12:37:43.281Z",
+    "coreMigrationVersion": "8.6.0",
+    "created_at": "2023-05-11T16:35:42.259Z",
     "id": "kubernetes-f5ab5510-9c94-11e9-94fd-c91206cd5249",
     "migrationVersion": {
-        "dashboard": "8.7.0"
+        "dashboard": "8.6.0"
     },
     "references": [
         {
@@ -3589,12 +3505,12 @@
         },
         {
             "id": "metrics-*",
-            "name": "d90b0470-44ab-4636-b90b-2b95e79e0577:metrics_d90b0470-44ab-4636-b90b-2b95e79e0577_0_index_pattern",
+            "name": "125ec894-444e-486b-a9c8-7205cde12a7e:indexpattern-datasource-layer-8cad09ad-7860-45ac-aaad-7b94af09c33d",
             "type": "index-pattern"
         },
         {
             "id": "metrics-*",
-            "name": "c6af3313-89c6-493b-8456-a296d3cd78a8:metrics_c6af3313-89c6-493b-8456-a296d3cd78a8_0_index_pattern",
+            "name": "e6506b77-2e3b-4bfa-831a-8a5daada553b:indexpattern-datasource-layer-af585c84-2ebf-42a3-9073-4d76e8b2610d",
             "type": "index-pattern"
         },
         {
@@ -3624,7 +3540,7 @@
         },
         {
             "id": "metrics-*",
-            "name": "2ba53067-d43d-42eb-ac50-2d941977ce95:f70e4843-55bc-47d0-8f1c-fbb4e72cfe92",
+            "name": "2ba53067-d43d-42eb-ac50-2d941977ce95:6572ee4d-01b4-47db-8804-d8ef217e21da",
             "type": "index-pattern"
         },
         {
@@ -3705,11 +3621,6 @@
         {
             "id": "metrics-*",
             "name": "91a7ce56-6a49-4b7e-837f-31c184b48c09:indexpattern-datasource-layer-7c7c4b67-a2df-427f-abbd-635e5fa73a9c",
-            "type": "index-pattern"
-        },
-        {
-            "id": "metrics-*",
-            "name": "91a7ce56-6a49-4b7e-837f-31c184b48c09:5206ded0-a875-4a7a-bc9b-8bca52c21d4a",
             "type": "index-pattern"
         },
         {
