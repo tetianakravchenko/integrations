@@ -84,7 +84,7 @@
                 },
                 "panelIndex": "c13eb504-6afb-4fa5-8a7d-a75c5fee15b7",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -168,7 +168,7 @@
                 "panelIndex": "ff6afcdf-0de2-47fb-aa9e-72b48f11e0cd",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -452,7 +452,7 @@
                 "panelIndex": "aef813b5-85d5-46c9-a86a-2e273806d488",
                 "title": "Node collector",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -536,7 +536,7 @@
                 "panelIndex": "0599e0ae-2375-4ceb-b12d-2ebec4310cc6",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -549,7 +549,7 @@
                             },
                             {
                                 "id": "metrics-*",
-                                "name": "3ed2b7d8-6b77-43b7-8ed3-c52117016d59",
+                                "name": "b6181877-0854-413d-8a7e-f8632b82f017",
                                 "type": "index-pattern"
                             }
                         ],
@@ -673,7 +673,7 @@
                                     "meta": {
                                         "alias": null,
                                         "disabled": false,
-                                        "index": "3ed2b7d8-6b77-43b7-8ed3-c52117016d59",
+                                        "index": "b6181877-0854-413d-8a7e-f8632b82f017",
                                         "key": "kubernetes.controllermanager.workqueue.adds.count",
                                         "negate": false,
                                         "type": "exists",
@@ -746,7 +746,7 @@
                 "panelIndex": "2ba53067-d43d-42eb-ac50-2d941977ce95",
                 "title": "Workqueue additions increase rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -954,7 +954,7 @@
                 "panelIndex": "1cd3ebab-9630-4253-b9a6-5f921e5cb617",
                 "title": "Workqueue retries increase rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1169,7 +1169,7 @@
                 "panelIndex": "3a26dffa-0696-485d-b991-1dbc5092082e",
                 "title": "Workqueue depth rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1363,7 +1363,7 @@
                 "panelIndex": "6a8b9a40-11ec-4790-a38d-2d88c5468f12",
                 "title": "Current unfinished work",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1447,7 +1447,7 @@
                 "panelIndex": "c3fee68f-01c6-49da-a759-2900b1cd15bf",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1780,7 +1780,7 @@
                 "panelIndex": "75255ce8-2d49-4b4f-ac0e-a20fe8f4daec",
                 "title": "Controller manager process data",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1965,7 +1965,7 @@
                 "panelIndex": "303702e1-ba33-49f2-b337-4cc7d7305606",
                 "title": "Average resident memory",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2191,7 +2191,7 @@
                 "panelIndex": "1604f0de-edd6-456e-8670-ab9b33988abb",
                 "title": "CPU usage increase over time",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2275,7 +2275,7 @@
                 "panelIndex": "f8313a9d-ab58-448e-b183-75f914caf53f",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2469,7 +2469,7 @@
                 "panelIndex": "fd90adaf-517f-4b92-a5b5-c29f7a16663b",
                 "title": "Leader controller manager",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2507,7 +2507,7 @@
                 },
                 "panelIndex": "83449269-d517-4fe6-9266-9d875070d90d",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2520,7 +2520,7 @@
                             },
                             {
                                 "id": "metrics-*",
-                                "name": "692cad49-25ea-40b4-87d2-535b5f35ecd4",
+                                "name": "ef2b018f-063d-4011-98af-884f7c45eefc",
                                 "type": "index-pattern"
                             }
                         ],
@@ -2540,8 +2540,10 @@
                                                 "24a01536-55c3-4c11-b62e-20a2a5435663X1",
                                                 "24a01536-55c3-4c11-b62e-20a2a5435663X0",
                                                 "1028ba4a-0d68-4d8d-8340-f7a2966f546d",
+                                                "1028ba4a-0d68-4d8d-8340-f7a2966f546dX2",
                                                 "1028ba4a-0d68-4d8d-8340-f7a2966f546dX1",
-                                                "1028ba4a-0d68-4d8d-8340-f7a2966f546dX0"
+                                                "1028ba4a-0d68-4d8d-8340-f7a2966f546dX0",
+                                                "24a01536-55c3-4c11-b62e-20a2a5435663X2"
                                             ],
                                             "columns": {
                                                 "1028ba4a-0d68-4d8d-8340-f7a2966f546d": {
@@ -2561,11 +2563,11 @@
                                                                 "decimals": 0
                                                             }
                                                         },
-                                                        "formula": "counter_rate(sum(kubernetes.controllermanager.client.request.count))",
+                                                        "formula": "defaults(counter_rate(max(kubernetes.controllermanager.client.request.count)), 0)",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
-                                                        "1028ba4a-0d68-4d8d-8340-f7a2966f546dX1"
+                                                        "1028ba4a-0d68-4d8d-8340-f7a2966f546dX2"
                                                     ],
                                                     "scale": "ratio",
                                                     "timeScale": "s"
@@ -2579,7 +2581,7 @@
                                                     },
                                                     "isBucketed": false,
                                                     "label": "Part of Server errors",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -2602,6 +2604,32 @@
                                                     "scale": "ratio",
                                                     "timeScale": "s"
                                                 },
+                                                "1028ba4a-0d68-4d8d-8340-f7a2966f546dX2": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Part of Server errors",
+                                                    "operationType": "math",
+                                                    "params": {
+                                                        "tinymathAst": {
+                                                            "args": [
+                                                                "1028ba4a-0d68-4d8d-8340-f7a2966f546dX1",
+                                                                0
+                                                            ],
+                                                            "location": {
+                                                                "max": 81,
+                                                                "min": 0
+                                                            },
+                                                            "name": "defaults",
+                                                            "text": "defaults(counter_rate(max(kubernetes.controllermanager.client.request.count)), 0)",
+                                                            "type": "function"
+                                                        }
+                                                    },
+                                                    "references": [
+                                                        "1028ba4a-0d68-4d8d-8340-f7a2966f546dX1"
+                                                    ],
+                                                    "scale": "ratio"
+                                                },
                                                 "24a01536-55c3-4c11-b62e-20a2a5435663": {
                                                     "customLabel": true,
                                                     "dataType": "number",
@@ -2619,11 +2647,11 @@
                                                                 "decimals": 0
                                                             }
                                                         },
-                                                        "formula": "counter_rate(sum(kubernetes.controllermanager.client.request.count))",
+                                                        "formula": "defaults(counter_rate(max(kubernetes.controllermanager.client.request.count)), 0)",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
-                                                        "24a01536-55c3-4c11-b62e-20a2a5435663X1"
+                                                        "24a01536-55c3-4c11-b62e-20a2a5435663X2"
                                                     ],
                                                     "scale": "ratio",
                                                     "timeScale": "s"
@@ -2637,7 +2665,7 @@
                                                     },
                                                     "isBucketed": false,
                                                     "label": "Part of Client errors",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -2660,6 +2688,32 @@
                                                     "scale": "ratio",
                                                     "timeScale": "s"
                                                 },
+                                                "24a01536-55c3-4c11-b62e-20a2a5435663X2": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Part of Client errors",
+                                                    "operationType": "math",
+                                                    "params": {
+                                                        "tinymathAst": {
+                                                            "args": [
+                                                                "24a01536-55c3-4c11-b62e-20a2a5435663X1",
+                                                                0
+                                                            ],
+                                                            "location": {
+                                                                "max": 81,
+                                                                "min": 0
+                                                            },
+                                                            "name": "defaults",
+                                                            "text": "defaults(counter_rate(max(kubernetes.controllermanager.client.request.count)), 0)",
+                                                            "type": "function"
+                                                        }
+                                                    },
+                                                    "references": [
+                                                        "24a01536-55c3-4c11-b62e-20a2a5435663X1"
+                                                    ],
+                                                    "scale": "ratio"
+                                                },
                                                 "63268365-bb35-456f-831c-78238984a061": {
                                                     "customLabel": true,
                                                     "dataType": "number",
@@ -2673,7 +2727,7 @@
                                                                 "decimals": 0
                                                             }
                                                         },
-                                                        "formula": "counter_rate(sum(kubernetes.controllermanager.client.request.count))",
+                                                        "formula": "counter_rate(max(kubernetes.controllermanager.client.request.count))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -2687,7 +2741,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Requests",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -2754,7 +2808,7 @@
                                     "meta": {
                                         "alias": null,
                                         "disabled": false,
-                                        "index": "692cad49-25ea-40b4-87d2-535b5f35ecd4",
+                                        "index": "ef2b018f-063d-4011-98af-884f7c45eefc",
                                         "key": "data_stream.dataset",
                                         "negate": false,
                                         "params": {
@@ -2830,7 +2884,7 @@
                 "panelIndex": "91a7ce56-6a49-4b7e-837f-31c184b48c09",
                 "title": "Requests and responses counter rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2896,7 +2950,7 @@
                                                                 "suffix": "ms"
                                                             }
                                                         },
-                                                        "formula": "sum(kubernetes.controllermanager.client.request.duration.us.sum)/sum(kubernetes.controllermanager.client.request.duration.us.count)/1000",
+                                                        "formula": "max(kubernetes.controllermanager.client.request.duration.us.sum)/max(kubernetes.controllermanager.client.request.duration.us.count)/1000",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -2909,7 +2963,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Average latency in ms",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -2921,7 +2975,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Average latency in ms",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -2952,7 +3006,7 @@
                                                                 "min": 0
                                                             },
                                                             "name": "divide",
-                                                            "text": "sum(kubernetes.controllermanager.client.request.duration.us.sum)/sum(kubernetes.controllermanager.client.request.duration.us.count)/1000",
+                                                            "text": "max(kubernetes.controllermanager.client.request.duration.us.sum)/max(kubernetes.controllermanager.client.request.duration.us.count)/1000",
                                                             "type": "function"
                                                         }
                                                     },
@@ -3047,18 +3101,18 @@
                 "panelIndex": "1bd24fa1-319e-4cae-9d45-d821b06a8034",
                 "title": "Average request latency",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             }
         ],
         "timeRestore": false,
         "title": "[Metrics Kubernetes] Controller Manager",
         "version": 1
     },
-    "coreMigrationVersion": "8.6.0",
-    "created_at": "2023-01-11T16:15:05.999Z",
+    "coreMigrationVersion": "8.7.1",
+    "created_at": "2023-05-11T12:37:21.200Z",
     "id": "kubernetes-bf9389f0-0c14-11ed-b760-5d1bccb47f56",
     "migrationVersion": {
-        "dashboard": "8.6.0"
+        "dashboard": "8.7.0"
     },
     "references": [
         {
@@ -3088,7 +3142,7 @@
         },
         {
             "id": "metrics-*",
-            "name": "2ba53067-d43d-42eb-ac50-2d941977ce95:3ed2b7d8-6b77-43b7-8ed3-c52117016d59",
+            "name": "2ba53067-d43d-42eb-ac50-2d941977ce95:b6181877-0854-413d-8a7e-f8632b82f017",
             "type": "index-pattern"
         },
         {
@@ -3178,7 +3232,7 @@
         },
         {
             "id": "metrics-*",
-            "name": "91a7ce56-6a49-4b7e-837f-31c184b48c09:692cad49-25ea-40b4-87d2-535b5f35ecd4",
+            "name": "91a7ce56-6a49-4b7e-837f-31c184b48c09:ef2b018f-063d-4011-98af-884f7c45eefc",
             "type": "index-pattern"
         },
         {
@@ -3197,7 +3251,5 @@
             "type": "index-pattern"
         }
     ],
-    "type": "dashboard",
-    "updated_at": "2023-01-11T16:15:05.999Z",
-    "version": "WzM0NTEsMV0="
+    "type": "dashboard"
 }

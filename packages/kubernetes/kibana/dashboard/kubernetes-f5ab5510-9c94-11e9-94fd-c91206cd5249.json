@@ -82,7 +82,7 @@
                 },
                 "panelIndex": "c13eb504-6afb-4fa5-8a7d-a75c5fee15b7",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -166,7 +166,7 @@
                 "panelIndex": "ff6afcdf-0de2-47fb-aa9e-72b48f11e0cd",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -204,7 +204,7 @@
                 },
                 "panelIndex": "a47d16df-1a5a-49e1-9a33-dba87c371904",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -339,7 +339,7 @@
                 "panelIndex": "a2b844d8-11e3-4469-af4b-744d33b603ad",
                 "title": "Pending pods",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -431,7 +431,7 @@
                 },
                 "panelIndex": "d90b0470-44ab-4636-b90b-2b95e79e0577",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -523,7 +523,7 @@
                 "panelIndex": "c6af3313-89c6-493b-8456-a296d3cd78a8",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -771,7 +771,7 @@
                 "panelIndex": "181a3fe5-e5b5-472e-98af-ea4aaadc3109",
                 "title": "Average scheduling attempt latency",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -935,7 +935,7 @@
                 "panelIndex": "d35d8849-89ba-42b8-8120-c14b087f9690",
                 "title": "Attempts counter rate by result",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1019,7 +1019,7 @@
                 "panelIndex": "0599e0ae-2375-4ceb-b12d-2ebec4310cc6",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1032,7 +1032,7 @@
                             },
                             {
                                 "id": "metrics-*",
-                                "name": "6572ee4d-01b4-47db-8804-d8ef217e21da",
+                                "name": "f70e4843-55bc-47d0-8f1c-fbb4e72cfe92",
                                 "type": "index-pattern"
                             }
                         ],
@@ -1070,7 +1070,7 @@
                                                     "label": "Counter rate",
                                                     "operationType": "formula",
                                                     "params": {
-                                                        "formula": "counter_rate(last_value(kubernetes.scheduler.workqueue.adds.count))",
+                                                        "formula": "counter_rate(max(kubernetes.scheduler.workqueue.adds.count))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -1082,15 +1082,11 @@
                                                 "5b2495ee-2297-4e20-81d3-ac385205cb01X0": {
                                                     "customLabel": true,
                                                     "dataType": "number",
-                                                    "filter": {
-                                                        "language": "kuery",
-                                                        "query": "kubernetes.scheduler.workqueue.adds.count: *"
-                                                    },
                                                     "isBucketed": false,
                                                     "label": "Part of Counter rate",
-                                                    "operationType": "last_value",
+                                                    "operationType": "max",
                                                     "params": {
-                                                        "sortField": "@timestamp"
+                                                        "emptyAsNull": false
                                                     },
                                                     "scale": "ratio",
                                                     "sourceField": "kubernetes.scheduler.workqueue.adds.count"
@@ -1156,7 +1152,7 @@
                                     "meta": {
                                         "alias": null,
                                         "disabled": false,
-                                        "index": "6572ee4d-01b4-47db-8804-d8ef217e21da",
+                                        "index": "f70e4843-55bc-47d0-8f1c-fbb4e72cfe92",
                                         "key": "kubernetes.scheduler.workqueue.adds.count",
                                         "negate": false,
                                         "type": "exists",
@@ -1229,7 +1225,7 @@
                 "panelIndex": "2ba53067-d43d-42eb-ac50-2d941977ce95",
                 "title": "Workqueue additions increase rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1437,7 +1433,7 @@
                 "panelIndex": "1cd3ebab-9630-4253-b9a6-5f921e5cb617",
                 "title": "Workqueue retries increase rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1652,7 +1648,7 @@
                 "panelIndex": "3a26dffa-0696-485d-b991-1dbc5092082e",
                 "title": "Workqueue depth rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1866,7 +1862,7 @@
                 "panelIndex": "6a8b9a40-11ec-4790-a38d-2d88c5468f12",
                 "title": "Current unfinished work",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1950,7 +1946,7 @@
                 "panelIndex": "c3fee68f-01c6-49da-a759-2900b1cd15bf",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2267,7 +2263,7 @@
                 "panelIndex": "a0716ae8-4157-473d-8eba-8ff6625fed4b",
                 "title": "Scheduler process data",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2427,7 +2423,7 @@
                 "panelIndex": "303702e1-ba33-49f2-b337-4cc7d7305606",
                 "title": "Average resident memory",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2653,7 +2649,7 @@
                 "panelIndex": "1604f0de-edd6-456e-8670-ab9b33988abb",
                 "title": "CPU usage increase over time",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2737,7 +2733,7 @@
                 "panelIndex": "f8313a9d-ab58-448e-b183-75f914caf53f",
                 "title": "",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2930,7 +2926,7 @@
                 "panelIndex": "668a51aa-98da-465e-9b09-d49e4f219968",
                 "title": "Leader scheduler",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2968,7 +2964,7 @@
                 },
                 "panelIndex": "e70eea20-8653-4340-b6dd-620090d3cf7a",
                 "type": "visualization",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -2981,7 +2977,7 @@
                             },
                             {
                                 "id": "metrics-*",
-                                "name": "c61ac757-89a1-4673-86b7-698a0d48e06e",
+                                "name": "5206ded0-a875-4a7a-bc9b-8bca52c21d4a",
                                 "type": "index-pattern"
                             }
                         ],
@@ -3002,7 +2998,9 @@
                                                 "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X0",
                                                 "00501c90-b23d-4bca-9354-eb2c48236139",
                                                 "00501c90-b23d-4bca-9354-eb2c48236139X1",
-                                                "00501c90-b23d-4bca-9354-eb2c48236139X0"
+                                                "00501c90-b23d-4bca-9354-eb2c48236139X0",
+                                                "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X2",
+                                                "00501c90-b23d-4bca-9354-eb2c48236139X2"
                                             ],
                                             "columns": {
                                                 "00501c90-b23d-4bca-9354-eb2c48236139": {
@@ -3022,11 +3020,11 @@
                                                                 "decimals": 1
                                                             }
                                                         },
-                                                        "formula": "counter_rate(sum(kubernetes.scheduler.client.request.count))",
+                                                        "formula": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
-                                                        "00501c90-b23d-4bca-9354-eb2c48236139X1"
+                                                        "00501c90-b23d-4bca-9354-eb2c48236139X2"
                                                     ],
                                                     "scale": "ratio",
                                                     "timeScale": "s"
@@ -3063,6 +3061,32 @@
                                                     "scale": "ratio",
                                                     "timeScale": "s"
                                                 },
+                                                "00501c90-b23d-4bca-9354-eb2c48236139X2": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Part of Server errors",
+                                                    "operationType": "math",
+                                                    "params": {
+                                                        "tinymathAst": {
+                                                            "args": [
+                                                                "00501c90-b23d-4bca-9354-eb2c48236139X1",
+                                                                0
+                                                            ],
+                                                            "location": {
+                                                                "max": 73,
+                                                                "min": 0
+                                                            },
+                                                            "name": "defaults",
+                                                            "text": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
+                                                            "type": "function"
+                                                        }
+                                                    },
+                                                    "references": [
+                                                        "00501c90-b23d-4bca-9354-eb2c48236139X1"
+                                                    ],
+                                                    "scale": "ratio"
+                                                },
                                                 "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4": {
                                                     "customLabel": true,
                                                     "dataType": "number",
@@ -3080,11 +3104,11 @@
                                                                 "decimals": 1
                                                             }
                                                         },
-                                                        "formula": "counter_rate(sum(kubernetes.scheduler.client.request.count))",
+                                                        "formula": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
-                                                        "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X1"
+                                                        "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X2"
                                                     ],
                                                     "scale": "ratio",
                                                     "timeScale": "s"
@@ -3121,6 +3145,32 @@
                                                     "scale": "ratio",
                                                     "timeScale": "s"
                                                 },
+                                                "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X2": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Part of Client errors",
+                                                    "operationType": "math",
+                                                    "params": {
+                                                        "tinymathAst": {
+                                                            "args": [
+                                                                "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X1",
+                                                                0
+                                                            ],
+                                                            "location": {
+                                                                "max": 73,
+                                                                "min": 0
+                                                            },
+                                                            "name": "defaults",
+                                                            "text": "defaults(counter_rate(sum(kubernetes.scheduler.client.request.count)), 0)",
+                                                            "type": "function"
+                                                        }
+                                                    },
+                                                    "references": [
+                                                        "148bf5e1-71ed-4e36-af5d-ebc5a76b0da4X1"
+                                                    ],
+                                                    "scale": "ratio"
+                                                },
                                                 "63268365-bb35-456f-831c-78238984a061": {
                                                     "customLabel": true,
                                                     "dataType": "number",
@@ -3134,7 +3184,7 @@
                                                                 "decimals": 1
                                                             }
                                                         },
-                                                        "formula": "counter_rate(sum(kubernetes.scheduler.client.request.count))",
+                                                        "formula": "counter_rate(max(kubernetes.scheduler.client.request.count))",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -3148,7 +3198,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Requests",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -3215,7 +3265,7 @@
                                     "meta": {
                                         "alias": null,
                                         "disabled": false,
-                                        "index": "c61ac757-89a1-4673-86b7-698a0d48e06e",
+                                        "index": "5206ded0-a875-4a7a-bc9b-8bca52c21d4a",
                                         "key": "data_stream.dataset",
                                         "negate": false,
                                         "params": {
@@ -3291,7 +3341,7 @@
                 "panelIndex": "91a7ce56-6a49-4b7e-837f-31c184b48c09",
                 "title": "Requests and responses counter rate",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -3347,7 +3397,7 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Average latency in ms",
+                                                    "label": "Latency in ms",
                                                     "operationType": "formula",
                                                     "params": {
                                                         "format": {
@@ -3357,7 +3407,7 @@
                                                                 "suffix": "ms"
                                                             }
                                                         },
-                                                        "formula": "sum(kubernetes.scheduler.client.request.duration.us.sum)/sum(kubernetes.scheduler.client.request.duration.us.count)/1000",
+                                                        "formula": "max(kubernetes.scheduler.client.request.duration.us.sum)/max(kubernetes.scheduler.client.request.duration.us.count)/1000",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -3370,7 +3420,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Average latency in ms",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -3382,7 +3432,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Average latency in ms",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -3413,7 +3463,7 @@
                                                                 "min": 0
                                                             },
                                                             "name": "divide",
-                                                            "text": "sum(kubernetes.scheduler.client.request.duration.us.sum)/sum(kubernetes.scheduler.client.request.duration.us.count)/1000",
+                                                            "text": "max(kubernetes.scheduler.client.request.duration.us.sum)/max(kubernetes.scheduler.client.request.duration.us.count)/1000",
                                                             "type": "function"
                                                         }
                                                     },
@@ -3506,20 +3556,20 @@
                     "y": 87
                 },
                 "panelIndex": "1bd24fa1-319e-4cae-9d45-d821b06a8034",
-                "title": "Average request latency",
+                "title": "Request latency",
                 "type": "lens",
-                "version": "8.6.0"
+                "version": "8.7.1"
             }
         ],
         "timeRestore": false,
         "title": "[Metrics Kubernetes] Scheduler",
         "version": 1
     },
-    "coreMigrationVersion": "8.6.0",
-    "created_at": "2023-01-11T16:15:10.039Z",
+    "coreMigrationVersion": "8.7.1",
+    "created_at": "2023-05-11T12:37:43.281Z",
     "id": "kubernetes-f5ab5510-9c94-11e9-94fd-c91206cd5249",
     "migrationVersion": {
-        "dashboard": "8.6.0"
+        "dashboard": "8.7.0"
     },
     "references": [
         {
@@ -3574,7 +3624,7 @@
         },
         {
             "id": "metrics-*",
-            "name": "2ba53067-d43d-42eb-ac50-2d941977ce95:6572ee4d-01b4-47db-8804-d8ef217e21da",
+            "name": "2ba53067-d43d-42eb-ac50-2d941977ce95:f70e4843-55bc-47d0-8f1c-fbb4e72cfe92",
             "type": "index-pattern"
         },
         {
@@ -3659,7 +3709,7 @@
         },
         {
             "id": "metrics-*",
-            "name": "91a7ce56-6a49-4b7e-837f-31c184b48c09:c61ac757-89a1-4673-86b7-698a0d48e06e",
+            "name": "91a7ce56-6a49-4b7e-837f-31c184b48c09:5206ded0-a875-4a7a-bc9b-8bca52c21d4a",
             "type": "index-pattern"
         },
         {
@@ -3678,7 +3728,5 @@
             "type": "index-pattern"
         }
     ],
-    "type": "dashboard",
-    "updated_at": "2023-01-11T16:15:10.039Z",
-    "version": "WzM0NzYsMV0="
+    "type": "dashboard"
 }

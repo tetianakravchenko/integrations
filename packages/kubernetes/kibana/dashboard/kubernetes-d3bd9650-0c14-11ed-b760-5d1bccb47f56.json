@@ -33,8 +33,10 @@
             }
         },
         "optionsJSON": {
-            "darkTheme": false,
             "hidePanelTitles": false,
+            "syncColors": false,
+            "syncCursor": true,
+            "syncTooltips": false,
             "useMargins": false
         },
         "panelsJSON": [
@@ -49,6 +51,7 @@
                             }
                         ],
                         "state": {
+                            "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
                                     "layers": {
@@ -90,7 +93,7 @@
                                                     "label": "Request Latency in Milliseconds",
                                                     "operationType": "formula",
                                                     "params": {
-                                                        "formula": "(sum(kubernetes.apiserver.request.duration.us.sum)/ sum(kubernetes.apiserver.request.duration.us.count))/1000",
+                                                        "formula": "(max(kubernetes.apiserver.request.duration.us.sum)/ max(kubernetes.apiserver.request.duration.us.count))/1000",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -103,7 +106,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Request Latency in Milliseconds",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -115,7 +118,7 @@
                                                     "dataType": "number",
                                                     "isBucketed": false,
                                                     "label": "Part of Request Latency in Milliseconds",
-                                                    "operationType": "sum",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -141,7 +144,7 @@
                                                                         "min": 1
                                                                     },
                                                                     "name": "divide",
-                                                                    "text": "sum(kubernetes.apiserver.request.duration.us.sum)/ sum(kubernetes.apiserver.request.duration.us.count)",
+                                                                    "text": "max(kubernetes.apiserver.request.duration.us.sum)/ max(kubernetes.apiserver.request.duration.us.count)",
                                                                     "type": "function"
                                                                 },
                                                                 1000
@@ -151,7 +154,7 @@
                                                                 "min": 0
                                                             },
                                                             "name": "divide",
-                                                            "text": "(sum(kubernetes.apiserver.request.duration.us.sum)/ sum(kubernetes.apiserver.request.duration.us.count))/1000",
+                                                            "text": "(max(kubernetes.apiserver.request.duration.us.sum)/ max(kubernetes.apiserver.request.duration.us.count))/1000",
                                                             "type": "function"
                                                         }
                                                     },
@@ -181,6 +184,7 @@
                                 }
                             },
                             "filters": [],
+                            "internalReferences": [],
                             "query": {
                                 "language": "kuery",
                                 "query": "NOT (kubernetes.apiserver.request.verb: WATCH or kubernetes.apiserver.request.verb: CONNECT)"
@@ -248,7 +252,7 @@
                 "panelIndex": "ce79d5a9-9a4c-45e1-b3e5-a31efe05a6f5",
                 "title": "Average Apiserver Request Latency per Resource [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.6.0-SNAPSHOT"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -403,7 +407,7 @@
                 "panelIndex": "9db496f9-079b-4ddd-b517-cec815a7e9cb",
                 "title": "Apiserver Requests Rate per Resource [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.6.0-SNAPSHOT"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -416,6 +420,7 @@
                             }
                         ],
                         "state": {
+                            "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
                                     "layers": {
@@ -442,7 +447,7 @@
                                                                 "decimals": 2
                                                             }
                                                         },
-                                                        "formula": "sum(kubernetes.apiserver.response.size.bytes.sum)/sum(kubernetes.apiserver.response.size.bytes.count)",
+                                                        "formula": "max(kubernetes.apiserver.response.size.bytes.sum)/max(kubernetes.apiserver.response.size.bytes.count)",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -454,8 +459,8 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Response Size.bytes in Bytes",
-                                                    "operationType": "sum",
+                                                    "label": "Part of Response Size in Bytes",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -466,8 +471,8 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Response Size.bytes in Bytes",
-                                                    "operationType": "sum",
+                                                    "label": "Part of Response Size in Bytes",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -478,7 +483,7 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Response Size.bytes in Bytes",
+                                                    "label": "Part of Response Size in Bytes",
                                                     "operationType": "math",
                                                     "params": {
                                                         "tinymathAst": {
@@ -491,7 +496,7 @@
                                                                 "min": 0
                                                             },
                                                             "name": "divide",
-                                                            "text": "sum(kubernetes.apiserver.response.size.bytes.sum)/sum(kubernetes.apiserver.response.size.bytes.count)",
+                                                            "text": "max(kubernetes.apiserver.response.size.bytes.sum)/max(kubernetes.apiserver.response.size.bytes.count)",
                                                             "type": "function"
                                                         }
                                                     },
@@ -543,6 +548,7 @@
                                 }
                             },
                             "filters": [],
+                            "internalReferences": [],
                             "query": {
                                 "language": "kuery",
                                 "query": ""
@@ -610,7 +616,7 @@
                 "panelIndex": "4b0b7368-a3ea-44ca-8c2e-ca55f7cc38da",
                 "title": "Average Apiserver Response Size per Resource [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.6.0-SNAPSHOT"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -623,6 +629,7 @@
                             }
                         ],
                         "state": {
+                            "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
                                     "layers": {
@@ -649,7 +656,7 @@
                                                                 "decimals": 2
                                                             }
                                                         },
-                                                        "formula": "sum(kubernetes.apiserver.watch.events.size.bytes.sum)/sum(kubernetes.apiserver.watch.events.size.bytes.count)",
+                                                        "formula": "max(kubernetes.apiserver.watch.events.size.bytes.sum)/max(kubernetes.apiserver.watch.events.size.bytes.count)",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -661,8 +668,8 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Rate of Apiserver Requests",
-                                                    "operationType": "sum",
+                                                    "label": "Part of Watch Events Size in Bytes",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -673,8 +680,8 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Rate of Apiserver Requests",
-                                                    "operationType": "sum",
+                                                    "label": "Part of Watch Events Size in Bytes",
+                                                    "operationType": "max",
                                                     "params": {
                                                         "emptyAsNull": false
                                                     },
@@ -685,7 +692,7 @@
                                                     "customLabel": true,
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Part of Rate of Apiserver Requests",
+                                                    "label": "Part of Watch Events Size in Bytes",
                                                     "operationType": "math",
                                                     "params": {
                                                         "tinymathAst": {
@@ -698,7 +705,7 @@
                                                                 "min": 0
                                                             },
                                                             "name": "divide",
-                                                            "text": "sum(kubernetes.apiserver.watch.events.size.bytes.sum)/sum(kubernetes.apiserver.watch.events.size.bytes.count)",
+                                                            "text": "max(kubernetes.apiserver.watch.events.size.bytes.sum)/max(kubernetes.apiserver.watch.events.size.bytes.count)",
                                                             "type": "function"
                                                         }
                                                     },
@@ -749,6 +756,7 @@
                                 }
                             },
                             "filters": [],
+                            "internalReferences": [],
                             "query": {
                                 "language": "kuery",
                                 "query": ""
@@ -816,7 +824,7 @@
                 "panelIndex": "97d844d4-e990-444a-8b94-34aa4dcd64cc",
                 "title": "Average Apiserver Watch Events Size per Kind [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.6.0-SNAPSHOT"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -945,7 +953,7 @@
                 "panelIndex": "9f255e7f-b213-4719-9c00-eedc2a919e2c",
                 "title": "Apiserver Requests per Resource and SubResource [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.6.0-SNAPSHOT"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1051,7 +1059,7 @@
                 "panelIndex": "481678b8-e443-4433-ad15-b55eaab7c8f4",
                 "title": "Apiserver Stored Objects per Resource [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.6.0-SNAPSHOT"
+                "version": "8.7.1"
             },
             {
                 "embeddableConfig": {
@@ -1090,18 +1098,18 @@
                 "panelIndex": "d79ccab2-4cce-4e41-ae01-434914884a5f",
                 "title": "Kubernetes Dashboards [Metrics Kubernetes]",
                 "type": "visualization",
-                "version": "8.6.0-SNAPSHOT"
+                "version": "8.7.1"
             }
         ],
         "timeRestore": false,
         "title": "[Metrics Kubernetes] API server",
         "version": 1
     },
-    "coreMigrationVersion": "8.6.0",
-    "created_at": "2023-01-11T14:27:20.540Z",
+    "coreMigrationVersion": "8.7.1",
+    "created_at": "2023-05-11T12:46:04.705Z",
     "id": "kubernetes-d3bd9650-0c14-11ed-b760-5d1bccb47f56",
     "migrationVersion": {
-        "dashboard": "8.6.0"
+        "dashboard": "8.7.0"
     },
     "references": [
         {
