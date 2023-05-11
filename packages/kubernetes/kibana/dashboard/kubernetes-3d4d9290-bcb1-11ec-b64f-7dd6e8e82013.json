@@ -19,8 +19,6 @@
         "optionsJSON": {
             "hidePanelTitles": false,
             "syncColors": false,
-            "syncCursor": true,
-            "syncTooltips": false,
             "useMargins": true
         },
         "panelsJSON": [
@@ -59,7 +57,7 @@
                 "panelIndex": "72efb777-3b17-42a9-91c5-b17ee964ce28",
                 "title": "Kubernetes Dashboards [Metrics Kubernetes]",
                 "type": "visualization",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -247,7 +245,7 @@
                 "panelIndex": "0a10c73f-959b-40e1-b1a2-609c3fd59914",
                 "title": "Status per Pod [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -431,7 +429,7 @@
                 "panelIndex": "8775bc75-d36c-4e37-94e4-ca63300d9dd3",
                 "title": "CPU Usage as Pct of the Total Node CPU [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -615,7 +613,7 @@
                 "panelIndex": "8e7901b2-cfc3-433d-9dcb-4af30c649efb",
                 "title": "CPU Usage as Pct of the Defined Pod Limit [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -799,7 +797,7 @@
                 "panelIndex": "98677dcb-ab94-47e8-94ca-326470ee2380",
                 "title": "Memory Usage as Pct of the Total Node Memory [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -983,7 +981,7 @@
                 "panelIndex": "5575d413-c4a4-4e34-8605-54f82e5e05b3",
                 "title": "Memory Usage as Pct of the Defined Pod Limit [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1167,7 +1165,7 @@
                 "panelIndex": "435eeb17-c28a-4bde-9c43-b85d8e463c03",
                 "title": "Working Set Memory Usage as Pct of the Defined Pod Limit [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1180,7 +1178,7 @@
                             },
                             {
                                 "id": "metrics-*",
-                                "name": "f5b57ad0-2eec-421b-874a-def7375d4944",
+                                "name": "5161af48-1284-4d1e-bf9c-da74803b2f2a",
                                 "type": "index-pattern"
                             }
                         ],
@@ -1267,7 +1265,7 @@
                                     "meta": {
                                         "alias": null,
                                         "disabled": false,
-                                        "index": "f5b57ad0-2eec-421b-874a-def7375d4944",
+                                        "index": "5161af48-1284-4d1e-bf9c-da74803b2f2a",
                                         "key": "data_stream.dataset",
                                         "negate": false,
                                         "params": {
@@ -1351,7 +1349,7 @@
                 "panelIndex": "7a1ccd34-5b1c-445b-8f1f-00d792c49104",
                 "title": "Network Outgoing Bytes per Pod [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             },
             {
                 "embeddableConfig": {
@@ -1364,7 +1362,7 @@
                             },
                             {
                                 "id": "metrics-*",
-                                "name": "3e0a89c8-f635-49e8-be4b-e7854f4b4a62",
+                                "name": "8638e86e-8ca5-43a9-bfd2-fa34dbcb5d04",
                                 "type": "index-pattern"
                             }
                         ],
@@ -1451,7 +1449,7 @@
                                     "meta": {
                                         "alias": null,
                                         "disabled": false,
-                                        "index": "3e0a89c8-f635-49e8-be4b-e7854f4b4a62",
+                                        "index": "8638e86e-8ca5-43a9-bfd2-fa34dbcb5d04",
                                         "key": "data_stream.dataset",
                                         "negate": false,
                                         "params": {
@@ -1535,18 +1533,18 @@
                 "panelIndex": "72b97d6f-17f7-44b0-87a9-e272981c7565",
                 "title": "Network Incoming Bytes per Pod [Metrics Kubernetes]",
                 "type": "lens",
-                "version": "8.7.1"
+                "version": "8.6.0"
             }
         ],
         "timeRestore": false,
         "title": "[Metrics Kubernetes] Pods",
         "version": 1
     },
-    "coreMigrationVersion": "8.7.1",
-    "created_at": "2023-05-11T11:30:21.740Z",
+    "coreMigrationVersion": "8.6.0",
+    "created_at": "2023-05-11T15:04:03.223Z",
     "id": "kubernetes-3d4d9290-bcb1-11ec-b64f-7dd6e8e82013",
     "migrationVersion": {
-        "dashboard": "8.7.0"
+        "dashboard": "8.6.0"
     },
     "references": [
         {
@@ -1616,7 +1614,7 @@
         },
         {
             "id": "metrics-*",
-            "name": "7a1ccd34-5b1c-445b-8f1f-00d792c49104:f5b57ad0-2eec-421b-874a-def7375d4944",
+            "name": "7a1ccd34-5b1c-445b-8f1f-00d792c49104:5161af48-1284-4d1e-bf9c-da74803b2f2a",
             "type": "index-pattern"
         },
         {
@@ -1626,7 +1624,7 @@
         },
         {
             "id": "metrics-*",
-            "name": "72b97d6f-17f7-44b0-87a9-e272981c7565:3e0a89c8-f635-49e8-be4b-e7854f4b4a62",
+            "name": "72b97d6f-17f7-44b0-87a9-e272981c7565:8638e86e-8ca5-43a9-bfd2-fa34dbcb5d04",
             "type": "index-pattern"
         },
         {
