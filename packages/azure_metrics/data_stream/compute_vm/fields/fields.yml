@@ -1,6 +1,210 @@
-- name: azure.compute_vm.*.*
-  type: object
-  object_type: float
-  object_type_mapping_type: "*"
-  description: >-
-    compute_vm
+- name: azure.compute_vm
+  type: group
+  fields:
+    - name: available_memory_bytes.avg
+      type: float
+      unit: byte
+      metric_type: gauge
+      description: Amount of physical memory, in bytes, immediately available for allocation to a process or for system use in the Virtual Machine
+    - name: cpu_credits_consumed.avg
+      type: float
+      metric_type: gauge
+      description: Total number of credits consumed by the Virtual Machine. Only available on B-series burstable VMs
+    - name: cpu_credits_remaining.avg
+      type: float
+      metric_type: gauge
+      description: Total number of credits available to burst. Only available on B-series burstable VMs
+    - name: inbound_flows_maximum_creation_rate.avg
+      type: float
+      metric_type: gauge
+      description: "The maximum creation rate of inbound flows (traffic going into the VM). Unit: CountPerSecond"
+    - name: outbound_flows_maximum_creation_rate.avg
+      type: float
+      metric_type: gauge
+      description: "The maximum creation rate of outbound flows (traffic going out of the VM)"
+    - name: disk_read_bytes.total
+      type: float
+      unit: byte
+      metric_type: gauge
+      description: Bytes read from disk during monitoring period
+    - name: network_in_total.total
+      type: float
+      unit: byte
+      metric_type: gauge
+      description: The number of bytes received on all network interfaces by the Virtual Machine(s) (Incoming Traffic)
+    - name: disk_write_operations_per_sec.avg
+      type: float
+      metric_type: gauge
+      description: Disk Write IOPS
+    - name: network_out_total.total
+      type: float
+      unit: byte
+      metric_type: gauge
+      description: The number of bytes out on all network interfaces by the Virtual Machine(s) (Outgoing Traffic)
+    - name: disk_read_operations_per_sec.avg
+      type: float
+      metric_type: gauge
+      description: "Disk Read IOPS. Unit: CountPerSecond"
+    - name: inbound_flows.avg
+      type: float
+      metric_type: gauge
+      description: Inbound Flows are number of current flows in the inbound direction (traffic going into the VM)
+    - name: outbound_flows.avg
+      type: float
+      metric_type: gauge
+      description: Outbound Flows are number of current flows in the outbound direction (traffic going out of the VM)
+    - name: percentage_cpu.avg
+      type: float
+      unit: percent
+      metric_type: gauge
+      description: The percentage of allocated compute units that are currently in use by the Virtual Machine(s)
+    - name: disk_write_bytes.total
+      type: float
+      unit: byte
+      metric_type: gauge
+      description: Bytes written to disk during monitoring period
+    - name: os_disk_queue_depth.avg
+      type: float
+      metric_type: gauge
+      description: OS Disk Queue Depth(or Queue Length)
+
+"Network Interface\\Bytes Received/sec"
+"Network Interface\\Packets/sec"
+"Network Interface\\Packets Received/sec"
+"Network Interface\\Packets Sent/sec"
+"Network Interface\\Packets Outbound Errors"
+"Network Interface\\Bytes Total/sec"
+"Network Interface\\Packets Received Errors"
+"Network Interface\\Bytes Sent/sec"
+"Processor Information\\% Processor Time"
+"Processor Information\\Processor Frequency"
+"Processor Information\\% User Time"
+"Processor Information\\% Privileged Time"
+"Process\\Working Set - Private"
+"Process\\Working Set"
+"Process\\Thread Count"
+"Process\\Handle Count"
+"System\\Processes"
+"System\\Processor Queue Length"
+"System\\Context Switches/sec"
+"System\\System Up Time"
+"Memory\\Available Bytes"
+"Memory\\Pool Paged Bytes"
+"Memory\\Pool Nonpaged Bytes"
+"Memory\\Page Faults/sec"
+"Memory\\Pages/sec"
+"Memory\\% Committed Bytes In Use"
+"Memory\\Committed Bytes"
+"Memory\\Cache Bytes"
+"ASP.NET\\Applications Running"
+"ASP.NET Applications\\Cache Total Entries"
+"ASP.NET Applications\\Transactions/Sec"
+"ASP.NET Applications\\Requests Succeeded"
+"ASP.NET Applications\\Errors Unhandled During Execution"
+"ASP.NET Applications\\Requests In Application Queue"
+"ASP.NET Applications\\Output Cache Entries"
+"ASP.NET Applications\\Compilations Total"
+"ASP.NET Applications\\Sessions Timed Out"
+"ASP.NET Applications\\Debugging Requests"
+"ASP.NET Applications\\Anonymous Requests/Sec"
+"ASP.NET Applications\\Transactions Pending"
+"ASP.NET Applications\\Requests Timed Out"
+"ASP.NET Applications\\Request Bytes In Total"
+"ASP.NET Applications\\Cache API Hits"
+"ASP.NET Applications\\Cache API Turnover Rate"
+"ASP.NET\\Application Restarts"
+"ASP.NET Applications\\Requests/Sec"
+"ASP.NET Applications\\Errors During Compilation"
+"ASP.NET Applications\\Cache Total Hit Ratio"
+"ASP.NET Applications\\Transactions Committed"
+"ASP.NET Applications\\Errors Total"
+"ASP.NET Applications\\Output Cache Turnover Rate"
+"ASP.NET Applications\\Cache API Entries"
+"ASP.NET Applications\\Sessions Active"
+"ASP.NET Applications\\Requests Not Authorized"
+"ASP.NET Applications\\Requests Not Found"
+"ASP.NET Applications\\Request Bytes Out Total"
+"ASP.NET Applications\\Errors Total/Sec"
+"ASP.NET Applications\\Requests Failed"
+"ASP.NET Applications\\Output Cache Hit Ratio"
+"ASP.NET Applications\\Pipeline Instance Count"
+"ASP.NET Applications\\Cache API Hit Ratio"
+"ASP.NET Applications\\Errors Unhandled During Execution"
+"ASP.NET Applications\\Errors Unhandled During Execution/Sec"
+"ASP.NET Applications\\Cache Total Hits"
+"ASP.NET Applications\\Sessions Abandoned"
+"ASP.NET Applications\\Output Cache Hits"
+"ASP.NET Applications\\Output Cache Misses"
+"ASP.NET Applications\\Cache Total Turnover Rate"
+"ASP.NET Applications\\Transactions Total"
+"ASP.NET Applications\\Errors During Preprocessing"
+"ASP.NET Applications\\Requests Total"
+"ASP.NET Applications\\Cache API Misses"
+"ASP.NET Applications\\Transactions Aborted"
+"ASP.NET\\Request Wait Time"
+"ASP.NET\\Request Execution Time"
+"ASP.NET\\Requests Disconnected"
+"ASP.NET\\Requests Current"
+"ASP.NET\\Requests Rejected"
+"ASP.NET Applications\\Sessions Total"
+"ASP.NET\\Worker Process Restarts"
+"ASP.NET\\Requests Queued"
+"ASP.NET\\Worker Processes Running"
+"Web Service\\Bytes Total/sec"
+"Web Service\\ISAPI Extension Requests/sec"
+"Web Service\\Current Connections"
+"Web Service\\Total Method Requests/sec"
+"SQLServer:SQL Statistics\\Batch Requests/sec"
+"SQLServer:Buffer Manager\\Page writes/sec"
+"SQLServer:SQL Statistics\\SQL Compilations/sec"
+"SQLServer:General Statistics\\User Connections"
+"SQLServer:Buffer Manager\\Database pages"
+"SQLServer:Buffer Manager\\Buffer cache hit ratio"
+"SQLServer:Memory Manager\\Total Server Memory (KB)"
+"SQLServer:SQL Statistics\\SQL Re-Compilations/sec"
+"SQLServer:Buffer Manager\\Page reads/sec"
+"SQLServer:Buffer Manager\\Lazy writes/sec"
+"SQLServer:Buffer Manager\\Checkpoint pages/sec"
+"SQLServer:Memory Manager\\Memory Grants Pending"
+disk/inodes_used_percent
+disk/free
+disk/used_percent
+disk/inodes_free_percent
+disk/free_percent
+disk/used
+diskio/io_time
+diskio/write_bytes
+diskio/total_bytes
+diskio/write_time
+diskio/read_bytes
+diskio/read_time
+diskio/writes
+diskio/reads
+diskio/total_transfers
+diskio/iops_in_progress
+net_per_err_out.avg
+net_per_packets_sent.avg
+net_per_err_in.avg
+net_per_bytes_total.avg
+net_per_drop_total.avg
+net_per_packets_recv.avg
+net_per_bytes_sent.avg
+net_per_bytes_recv.avg
+cpu/usage_iowait
+cpu/usage_user
+cpu/usage_nice
+cpu/usage_irq
+cpu/usage_active
+cpu/usage_system
+cpu/usage_idle
+mem/available
+mem/used_percent
+mem/used
+mem/available_percent
+swap/used_percent
+swap/free_percent
+swap/used
+swap/free
+kernel_vmstat/total_pages
+kernel_vmstat/pgpgout
+kernel_vmstat/pgpgin
