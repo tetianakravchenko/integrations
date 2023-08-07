@@ -67,40 +67,43 @@
       type: float
       metric_type: gauge
       description: OS Disk Queue Depth(or Queue Length)
-
-    - name: network_interface_bytes_received_per_sec.avg # "Network Interface\\Bytes Received/sec"
+    - name: network_interface_bytes_received_per_sec.avg
       type: float
       metric_type: gauge
       description: the number of bytes received over the specified interface per second
-    - name: network_interface_packets_per_sec.avg # "Network Interface\\Packets/sec"
+    - name: network_interface_packets_per_sec.avg
       type: float
       metric_type: gauge
-      description: the number of packets transmitted and received over the specified interface per second
-    - name: network_interface_packets_received_per_sec.avg # "Network Interface\\Packets Received/sec"
+      description: The number of packets transmitted and received over the specified interface per second
+    - name: network_interface_packets_received_per_sec.avg
       type: float
       metric_type: gauge
       description: the number of packets received over the specified interface per second
-    - name: network_interface_packets_sent_per_sec.avg # "Network Interface\\Packets Sent/sec"
+    - name: network_interface_packets_sent_per_sec.avg
       type: float
       metric_type: gauge
       description: the number of packets transmitted over the specified interface per second
-    - name: network_interface_packets_outbound_errors.avg # "Network Interface\\Packets Outbound Errors"
-    - name: network_interface_bytes_total_per_sec.avg # "Network Interface\\Bytes Total/sec"
+    - name: network_interface_packets_outbound_errors.avg
+      type: float
+      description: The number of packets that could not be transmitted because of errors
+    - name: network_interface_bytes_total_per_sec.avg
       type: float
       metric_type: gauge
       description: The number of bytes transmitted and received over the specified interface per second
-    - name: network_interface_packets_received_errors.avg # "Network Interface\\Packets Received Errors"
-    - name: network_interface_bytes_sent_per_sec.avg # "Network Interface\\Bytes Sent/sec"
+    - name: network_interface_packets_received_errors.avg
+      type: float
+      description: The number of packets that could not be sent because of errors
+    - name: network_interface_bytes_sent_per_sec.avg
       type: float
       metric_type: gauge
       description: The number of bytes transmitted over the specified interface per second
-
-    - name: processor_information_pct_processor_time.avg # "Processor Information\\% Processor Time"
+    - name: processor_information_pct_processor_time.avg
       unit: percent
       type: float
       metric_type: gauge
       description: The percentage of elapsed time that the processor spends to execute a non-Idle thread
     - name: processor_information_processor_frequency.avg # "Processor Information\\Processor Frequency"
+      description: ??
     - name: processor_information_pct_user_time.avg # "Processor Information\\% User Time"
     - name: processor_information_pct_privileged_time.avg # "Processor Information\\% Privileged Time"
     - name: process_working_set_private.avg # "Process\\Working Set - Private"
@@ -111,44 +114,44 @@
     - name: system_processor_queue_length.avg # "System\\Processor Queue Length"
     - name: system_context_switches_per_sec.avg # "System\\Context Switches/sec"
     - name: system_system_up_time.avg # "System\\System Up Time"
-    - name: memory_available_bytes.avg # "Memory\\Available Bytes"
+    - name: memory_available_bytes.avg
       unit: byte
       type: float
       metric_type: gauge
       description: The amount of physical memory, in bytes, immediately available for allocation to a process or for system use
-    - name: memory_pool_paged_bytes.avg # "Memory\\Pool Paged Bytes"
+    - name: memory_pool_paged_bytes.avg
       unit: byte
       type: float
       metric_type: gauge
       description: The size, in bytes, of the paged pool, an area of system memory (physical memory used by the operating system) for objects that can be written to disk when they are not being used
-    - name: memory_pool_nonpaged_bytes.avg # "Memory\\Pool Nonpaged Bytes"
+    - name: memory_pool_nonpaged_bytes.avg
       unit: byte
       type: float
       metric_type: gauge
       description: The size, in bytes, of the nonpaged pool, an area of system memory (physical memory used by the operating system) for objects that cannot be written to disk, but must remain in physical memory as long as they are allocated
     - name: memory_page_faults_per_sec.avg # "Memory\\Page Faults/sec"
-    - name: memory_pages_per_sec.avg # "Memory\\Pages/sec"
+    - name: memory_pages_per_sec.avg
       type: float
       metric_type: gauge
       description: The rate at which pages are read from or written to disk to resolve hard page faults
-    - name: memory_pct_committed_bytes_in_use.avg # "Memory\\% Committed Bytes In Use"
+    - name: memory_pct_committed_bytes_in_use.avg
       unit: percent
       type: float
       metric_type: gauge
       description: The ratio of Memory \ Committed Bytes to the Memory \ Commit Limit
-    - name: memory_committed_bytes.avg # "Memory\\Committed Bytes"
+    - name: memory_committed_bytes.avg
       unit: byte
       type: float
       metric_type: gauge
       description: The amount of committed virtual memory, in bytes
     - name: memory_cache_bytes.avg # "Memory\\Cache Bytes"
-    - name: "ASP.NET\\Applications Running"
+    - name: asp_net_applications_running.avg
       description:  The number of applications running concurrently on the server computer.
     - name: "ASP.NET Applications\\Cache Total Entries"
       description: The total number of entries in the cache
     - name: "ASP.NET Applications\\Transactions/Sec"
       description:  The number of COM+ transactions started per second for all active ASP.NET applications.
-    - name: "ASP.NET Applications\\Requests Succeeded"
+    - name: asp_net_applications_requests_succeeded.avg
       description:  The number of requests that executed successfully (status code 200)
     - name: "ASP.NET Applications\\Requests In Application Queue"
       description: The current number of requests, including those that are queued, currently executing, or waiting to be written to the client
@@ -156,7 +159,7 @@
       description: The total number of entries in the output cache.
     - name: "ASP.NET Applications\\Compilations Total"
       description: The total number of compilations that have taken place during the lifetime of the current Web server process
-    - name: "ASP.NET Applications\\Sessions Timed Out"
+    - name: asp_net_applications_sessions_timed_out.avg
       description: The number of sessions that timed out. This counter is supported only with in-memory session state.
     - name: "ASP.NET Applications\\Debugging Requests"
       desctiption: The number of requests that occur while debugging is enabled.
@@ -164,7 +167,7 @@
       description:   The number of requests per second that are using anonymous authentication.
     - name: "ASP.NET Applications\\Transactions Pending"
       description: The number of COM+ transactions in progress for all active ASP.NET applications.
-    - name: "ASP.NET Applications\\Requests Timed Out"
+    - name: asp_net_applications_requests_timed_out.avg
       description:  The number of requests that timed out (status code 500).
     - name: "ASP.NET Applications\\Request Bytes In Total"
       unit: byte
@@ -183,13 +186,13 @@
       description: The ratio of hits to misses for the cache
     - name: "ASP.NET Applications\\Transactions Committed"
       description: The number of COM+ transactions committed for all active ASP.NET applications.
-    - name: "ASP.NET Applications\\Errors Total"
+    - name: asp_net_applications_errors_total.avg
       description: The total number of errors that occur during the execution of HTTP requests, including any parser, compilation, or run-time errors
     - name: "ASP.NET Applications\\Output Cache Turnover Rate"
       description: The number of additions and removals to the output cache per second. If the turnover rate is high, the cache is not being used effectively
     - name: "ASP.NET Applications\\Cache API Entries"
       description:  The total number of entries in the application cache
-    - name: "ASP.NET Applications\\Sessions Active"
+    - name: asp_net_applications_sessions_active.avg
       description: The number of sessions currently active. This counter is supported only with in-memory session state
     - name: "ASP.NET Applications\\Requests Not Authorized"
       description: The number of requests that failed due to no authorization (status code 401).
@@ -199,7 +202,7 @@
       description:  The total size in bytes of responses sent to a client. This does not include HTTP response headers.
     - name: "ASP.NET Applications\\Errors Total/Sec"
       description:  The number of errors per second that occur during the execution of HTTP requests, including any parser, compilation, or run-time errors.
-    - name: "ASP.NET Applications\\Requests Failed"
+    - name: asp_net_applications_requests_failed.avg
       description: The total number of failed requests. Any status codes greater than or equal to 400 will increment this counter.
     - name: "ASP.NET Applications\\Output Cache Hit Ratio"
       unit: percent
@@ -214,7 +217,7 @@
       description:  The number of unhandled exceptions per second that occur during the execution of HTTP requests.
     - name: "ASP.NET Applications\\Cache Total Hits"
       description: The total number of hits from the cache
-    - name: "ASP.NET Applications\\Sessions Abandoned"
+    - name: asp_net_applications_sessions_abandoned.avg
       description: The number of sessions that have been explicitly abandoned. This counter is supported only with in-memory session state.
     - name: "ASP.NET Applications\\Output Cache Hits"
       description:  The total number of requests serviced from the output cache.
@@ -226,7 +229,7 @@
       description: The total number of COM+ transactions for all active ASP.NET applications.
     - name: "ASP.NET Applications\\Errors During Preprocessing"
       description:  The number of errors that occurred during parsing, excluding compilation and run-time errors.
-    - name: "ASP.NET Applications\\Requests Total"
+    - name: asp_net_applications_requests_total.avg
       description:  The total number of requests since the service was started.
     - name: "ASP.NET Applications\\Cache API Misses"
       description: The total number of failed requests to the cache when accessed through the external cache APIs
@@ -244,30 +247,64 @@
       description: The number of request currently being processed by the server
     - name: "ASP.NET\\Requests Rejected"
       description: The total number of requests not executed because of insufficient server resources to process them. This counter represents the number of requests that return a 503 HTTP status code, indicating that the server is too busy.
-    - name: "ASP.NET Applications\\Sessions Total"
+    - name: asp_net_applications_sessions_total.avg
       description: The total number of sessions. This counter is supported only with in-memory session state.
     - name: "ASP.NET\\Worker Process Restarts"
       description: The number of times a worker process has been restarted on the server computer
     - name: "ASP.NET\\Requests Queued"
       description: The number of requests waiting for service from the queue.
     - name: "ASP.NET\\Worker Processes Running"
-      description:  The number of worker processes running on the server computer.
-    "Web Service\\Bytes Total/sec"
-    "Web Service\\ISAPI Extension Requests/sec"
-    "Web Service\\Current Connections"
-    "Web Service\\Total Method Requests/sec"
-    "SQLServer:SQL Statistics\\Batch Requests/sec"
-    "SQLServer:Buffer Manager\\Page writes/sec"
-    "SQLServer:SQL Statistics\\SQL Compilations/sec"
-    "SQLServer:General Statistics\\User Connections"
-    "SQLServer:Buffer Manager\\Database pages"
-    "SQLServer:Buffer Manager\\Buffer cache hit ratio"
-    "SQLServer:Memory Manager\\Total Server Memory (KB)"
-    "SQLServer:SQL Statistics\\SQL Re-Compilations/sec"
-    "SQLServer:Buffer Manager\\Page reads/sec"
-    "SQLServer:Buffer Manager\\Lazy writes/sec"
-    "SQLServer:Buffer Manager\\Checkpoint pages/sec"
-    "SQLServer:Memory Manager\\Memory Grants Pending"
+      description: The number of worker processes running on the server computer.
+    - name: web_service_bytes_total_per_sec.avg
+      type: float
+      description: ???
+    - name: web_service_isapi_extension_requests_per_sec.avg
+      type: float
+      description: ???
+    - name: web_service_current_connections.avg
+      type: float
+      description: Total number of active connections on the IIS server
+    - name: web_service_total_method_requests_per_sec.avg
+      type: float
+      description: ???
+
+    - name: "SQLServer:SQL Statistics\\Batch Requests/sec"
+      type: float
+      description: Number of Transact-SQL command batches received per second
+    - name: sqlserver_buffer_manager_page_writes_per_sec.avg
+      type: float
+      description: Indicates the number of physical database page writes that are issued per second.
+    - name: "SQLServer:SQL Statistics\\SQL Compilations/sec"
+      type: float
+      description: Number of SQL compilations per second. Indicates the number of times the compile code path is entered
+    - name: "SQLServer:General Statistics\\User Connections"
+      type: float
+      description: The number of users currently connected to SQL Server.
+    - name: "SQLServer:Buffer Manager\\Database pages"
+      type: float
+      description: The number of pages in the buffer pool with database content.
+    - name: "SQLServer:Buffer Manager\\Buffer cache hit ratio"
+      type: float
+      unit: percent
+      description: The percentage of pages found in the buffer cache without having to read from disk. The ratio is the total number of cache hits divided by the total number of cache lookups over the last few thousand page accesses
+    - name: sqlserver_memory_manager_total_server_memory.avg
+      type: float
+      description: Specifies the amount of memory the server has committed using the memory manager.
+    - name: "SQLServer:SQL Statistics\\SQL Re-Compilations/sec"
+      type: float
+      description: Number of statement recompiles per second
+    - name: sqlserver_buffer_manager_page_reads_per_sec.avg
+      type: float
+      description: The number of physical database page reads that are issued per second
+    - name: "SQLServer:Buffer Manager\\Lazy writes/sec"
+      type: float
+      description: The number of buffers written per second by the buffer manager's lazy writer. The lazy writer is a system process that flushes out batches of dirty, aged buffers and makes them available to user processes
+    - name: "SQLServer:Buffer Manager\\Checkpoint pages/sec"
+      type: float
+      description: The number of pages flushed to disk per second by a checkpoint or other operation that require all dirty pages to be flushed.
+    - name: "SQLServer:Memory Manager\\Memory Grants Pending"
+      type: float
+      description: Specifies the total number of processes waiting for a workspace memory grant.
     - name: disk_per_inodes_used_percent.avg # disk/inodes_used_percent
       unit: percent
     - name: disk_per_free.avg # disk/free
