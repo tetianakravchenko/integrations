@@ -1,7 +1,7 @@
 type: logs
 title: PostgreSQL logs
 streams:
-  - input: logfile
+  - input: filestream
     vars:
       - name: paths
         type: text
@@ -20,6 +20,13 @@ streams:
         show_user: false
         default:
           - postgresql-log
+      - name: symlinks
+        type: bool
+        title: Use Symlinks
+        multi: false
+        required: true
+        show_user: true
+        default: true
       - name: preserve_original_event
         required: true
         show_user: true

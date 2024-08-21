@@ -1,4 +1,9 @@
 # newer versions go on top
+- version: "1.25.0"
+  changes:
+    - description: Remove multiline
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/10411
 - version: "1.23.0"
   changes:
     - description: Add processor support for activity, bgwriter, database and statement data streams.
