@@ -67,7 +67,12 @@ processors:
             - kubernetes.annotations.elastic_co/preserve_original_event
         - regexp:
             kubernetes.annotations.elastic_co/preserve_original_event: "^(?i)true$"
-
+{{#if cluster_name}}
+- add_fields:
+    target: orchestrator.cluster
+    fields:
+      name: {{cluster_name}}
+{{/if}}
 {{#if processors}}
 {{processors}}
 {{/if}}

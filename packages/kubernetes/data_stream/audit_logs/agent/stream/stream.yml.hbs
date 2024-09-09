@@ -7,10 +7,18 @@ parsers:
 - ndjson:
     add_error_key: true
     target: "kubernetes.audit"
-{{#if processors}}
+
 processors:
+{{#if cluster_name}}
+- add_fields:
+    target: orchestrator.cluster
+    fields:
+      name: {{cluster_name}}
+{{/if}}
+{{#if processors}}
 {{processors}}
 {{/if}}
+
 {{#if condition}}
 condition: {{ condition }}
 {{/if}}

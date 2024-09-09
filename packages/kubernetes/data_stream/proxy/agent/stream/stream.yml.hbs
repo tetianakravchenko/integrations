@@ -5,10 +5,13 @@ hosts:
 {{/each}}
 period: {{period}}
 
-{{#if processors}}
 processors:
-{{processors}}
+{{#if cluster_name}}
+- add_fields:
+    target: orchestrator.cluster
+    fields:
+      name: {{cluster_name}}
 {{/if}}
-{{#if condition}}
-condition: {{ condition }}
+{{#if processors}}
+{{processors}}
 {{/if}}

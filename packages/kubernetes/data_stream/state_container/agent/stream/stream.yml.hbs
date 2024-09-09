@@ -35,7 +35,13 @@ ssl.certificate_authorities:
 {{/each}}
 {{/if}}
 
-{{#if processors}}
 processors:
+{{#if cluster_name}}
+- add_fields:
+    target: orchestrator.cluster
+    fields:
+      name: {{cluster_name}}
+{{/if}}
+{{#if processors}}
 {{processors}}
 {{/if}}

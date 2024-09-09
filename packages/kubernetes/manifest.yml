@@ -1,7 +1,7 @@
 format_version: 3.1.2
 name: kubernetes
 title: Kubernetes
-version: 1.66.4
+version: 1.68.1
 description: Collect logs and metrics from Kubernetes clusters with Elastic Agent.
 type: integration
 categories:
@@ -21,6 +21,13 @@ icons:
     title: Logo Kubernetes
     size: 32x32
     type: image/svg+xml
+vars:
+  - name: cluster_name
+    type: text
+    title: Kubernetes Cluster Name
+    multi: false
+    required: false
+    show_user: false
 policy_templates:
   - name: kubelet
     title: Kubelet Metrics

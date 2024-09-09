@@ -22,10 +22,17 @@ ssl.certificate_authorities:
 namespace: {{namespace}}
 {{/if}}
 
-{{#if processors}}
 processors:
+{{#if cluster_name}}
+- add_fields:
+    target: orchestrator.cluster
+    fields:
+      name: {{cluster_name}}
+{{/if}}
+{{#if processors}}
 {{processors}}
 {{/if}}
+
 {{#if condition}}
 {{#if stream_condition}}
 condition: {{ condition }} and {{ stream_condition }}
